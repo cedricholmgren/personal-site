@@ -1,12 +1,23 @@
 import Link from "next/link";
+import Image from "next/image";
 import Icon from "./Icon";
 
 export default function Header() {
   return (
     <header className="container mx-auto px-4 py-6">
       <nav className="flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold">
-          Cedric
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.webp"
+            alt="Cedric Logo"
+            width={64}
+            height={64}
+            className="rounded-full"
+          />
+          <div className="flex flex-col">
+            <span className="text-xl font-bold text-gray-700">Cedric</span>
+            <span className="text-xl font-bold text-gray-700">Holmgren</span>
+          </div>
         </Link>
         <div className="hidden md:flex space-x-8">
           <Link

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Layout from "../components/Layout";
 import Icon from "../components/Icon";
+import Tag from "../components/Tag";
 
 interface Project {
   title: string;
@@ -47,7 +48,7 @@ export default function Projects() {
       {/* Hero Section */}
       <section className="py-16 md:py-24">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1>
             My Projects
             <span className="block text-2xl md:text-3xl font-normal mt-2 text-gray-600">
               Software I've built and contributed to
@@ -68,16 +69,13 @@ export default function Projects() {
               key={index}
               className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-xl shadow-sm hover:shadow-md transition"
             >
-              <h2 className="text-2xl font-bold mb-3">{project.title}</h2>
+              <h2>{project.title}</h2>
               <p className="text-gray-600 mb-6">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.technologies.map((tech, techIndex) => (
-                  <span
-                    key={techIndex}
-                    className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
-                  >
+                  <Tag key={techIndex} variant="blue">
                     {tech}
-                  </span>
+                  </Tag>
                 ))}
               </div>
               <div className="flex space-x-4">
@@ -109,7 +107,7 @@ export default function Projects() {
       {/* Call to Action */}
       <section className="py-16 border-t border-gray-100">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Want to work together?</h2>
+          <h2 className="text-3xl mb-6">Want to work together?</h2>
           <p className="text-xl text-gray-600 mb-8">
             I'm always open to discussing new projects, creative ideas, or
             opportunities to be part of your vision.

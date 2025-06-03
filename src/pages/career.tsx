@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Layout from "../components/Layout";
 import Icon from "../components/Icon";
+import Tag from "../components/Tag";
 
 interface Experience {
   title: string;
@@ -72,7 +73,7 @@ export default function Career() {
       {/* Hero Section */}
       <section className="py-16 md:py-24">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1>
             My Career
             <span className="block text-2xl md:text-3xl font-normal mt-2 text-gray-600">
               Professional Journey & Experience
@@ -93,7 +94,7 @@ export default function Career() {
             <div className="mr-4 inline-flex items-center justify-center w-12 h-12 rounded-lg bg-indigo-100">
               <Icon name="briefcase" className="w-6 h-6 text-indigo-600" />
             </div>
-            <h2 className="text-2xl font-bold">Work Experience</h2>
+            <h2>Work Experience</h2>
           </div>
           <div className="space-y-12">
             {experiences.map((experience, index) => (
@@ -103,7 +104,7 @@ export default function Career() {
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
-                    <h3 className="text-xl font-bold">{experience.title}</h3>
+                    <h3>{experience.title}</h3>
                     <p className="text-gray-600">{experience.company}</p>
                   </div>
                   <span className="text-sm text-gray-500 mt-2 md:mt-0">
@@ -113,12 +114,9 @@ export default function Career() {
                 <p className="text-gray-600 mb-4">{experience.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {experience.technologies.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
-                    >
+                    <Tag key={techIndex} variant="blue">
                       {tech}
-                    </span>
+                    </Tag>
                   ))}
                 </div>
                 <ul className="list-disc list-inside text-gray-600 space-y-2">
@@ -141,7 +139,7 @@ export default function Career() {
             <div className="mr-4 inline-flex items-center justify-center w-12 h-12 rounded-lg bg-teal-100">
               <Icon name="book-open" className="w-6 h-6 text-teal-600" />
             </div>
-            <h2 className="text-2xl font-bold">Education</h2>
+            <h2>Education</h2>
           </div>
           <div className="space-y-8">
             {education.map((edu, index) => (
@@ -151,7 +149,7 @@ export default function Career() {
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
-                    <h3 className="text-xl font-bold">{edu.degree}</h3>
+                    <h3>{edu.degree}</h3>
                     <p className="text-gray-600">{edu.school}</p>
                   </div>
                   <span className="text-sm text-gray-500 mt-2 md:mt-0">
@@ -168,9 +166,7 @@ export default function Career() {
       {/* Call to Action */}
       <section className="py-16 border-t border-gray-100">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            Interested in Working Together?
-          </h2>
+          <h2 className="text-3xl mb-6">Interested in Working Together?</h2>
           <p className="text-xl text-gray-600 mb-8">
             I'm always open to new opportunities and challenges. Let's discuss
             how we can work together to create something amazing.
