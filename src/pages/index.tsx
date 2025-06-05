@@ -9,22 +9,17 @@ export default function Home() {
       {/* Hero Section */}
       <section className="py-16 md:py-24">
         <div className="max-w-3xl mx-auto text-center">
-          <h1>
-            Hey, I'm Cedric
-            <span className="block text-2xl md:text-3xl font-normal mt-2 text-gray-600">
-              Software Developer
-            </span>
-          </h1>
+          <h1>Hey, I'm Cedric</h1>
           <p className="text-xl text-gray-600 mb-8">
-            I build modern web applications with TypeScript, React, and Next.js.
-            When I'm not coding, you'll find me playing NBA 2K, chess, or Rocket
-            League.
+            I'm a software developer, husband, father of one, rec league hockey
+            forward, rusty rocket league grand champ, and I live in the Pacific
+            Northwest.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Tag variant="emerald">TypeScript</Tag>
-            <Tag variant="blue">React</Tag>
-            <Tag variant="purple">Next.js</Tag>
-            <Tag variant="cyan">Tailwind CSS</Tag>
+            <Tag variant="purple">Lutheran</Tag>
+            <Tag variant="green">Father / Husband</Tag>
+            <Tag variant="blue">Software Developer</Tag>
+            <Tag variant="red">Gamer</Tag>
           </div>
         </div>
       </section>
@@ -37,7 +32,8 @@ export default function Home() {
           </div>
           <h2>Career</h2>
           <p className="text-gray-600 mb-6">
-            My journey as a developer, experiences, and professional growth.
+            I first got to paid to code at Chick-fil-a at 17, see my journey as
+            a developer.
           </p>
           <Link
             href="/career"
@@ -53,7 +49,8 @@ export default function Home() {
           </div>
           <h2>Projects</h2>
           <p className="text-gray-600 mb-6">
-            Software I've built or contributed to throughout my career.
+            Personal projects I've built or worked on. All starting with this
+            site.
           </p>
           <Link
             href="/projects"
@@ -69,7 +66,7 @@ export default function Home() {
           </div>
           <h2>Blog</h2>
           <p className="text-gray-600 mb-6">
-            Thoughts on development, gaming, and other interests.
+            Thoughts on coding, chess, rocket league, and other interests.
           </p>
           <Link
             href="/blog"
@@ -89,11 +86,7 @@ export default function Home() {
             </div>
             <h2>A Bit About Me</h2>
           </div>
-          <p className="text-gray-600 mb-6">
-            Beyond coding, I'm passionate about gaming, chess strategy, and
-            sports. My faith is an important part of who I am, and I enjoy
-            connecting with others who share similar interests.
-          </p>
+          <p className="text-gray-600 mb-6"></p>
           <div className="flex flex-wrap gap-3 mb-8">
             <Tag variant="green">NBA 2K</Tag>
             <Tag variant="yellow">Chess</Tag>
